@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #333; /* Fondo oscuro para destacar los elementos */
+    margin: 0;
+}
+
+.container {
+	/* ... otros estilos ... */
+	    max-width: 800px; /* Asegura que el contenedor sea lo suficientemente grande */
+	    width: 90%; 
+	    /* ... otros estilos ... */
+    text-align: center;
+    padding: 30px;
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 350px; /* Asegura un buen espacio vertical */
+}
+
+#dice-display {
+	/* Usamos un ancho grande que se adapta al 80% del contenedor */
+	    width: 80%; 
+	    /* El truco: establecer un ancho máximo para pantallas grandes */
+	    max-width: 400px; 
+	    /* Establecer una relación de aspecto 1:1 (cuadrado) */
+	    padding-bottom: 80%; /* Altura es el 80% del ancho (Truco CSS) */
+	    position: relative;
+	    margin: 40px auto 60px auto;
+}
+
+#dice-img {
+	/* Ocupa el 100% del contenedor #dice-display */
+	    width: 100%;
+	    height: 100%;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    object-fit: contain; /* Asegura que la imagen se vea completa sin cortarse */
+	    border-radius: 10px;
+}
+
+#roll-button {
+	/* Establecer el ancho fijo en 700px */
+	    width: 700px; 
+    
+	    /* Aumentamos el padding y el tamaño de fuente para que luzca grande */
+	    padding: 20px 25px; 
+	    font-size: 28px; 
+	    font-weight: bold;
+    
+	    /* ... otros estilos ... */
+	    background-color: #007bff; 
+	    color: white;
+	    border: none;
+	    border-radius: 12px; /* Un poco más de borde para el botón grande */
+	    transition: background-color 0.3s, transform 0.1s;
+	    box-shadow: 0 6px #0056b3; /* Sombra más grande */
+	}
+}
+
+#roll-button:hover {
+    background-color: #0056b3;
+}
+
+#roll-button:active {
+	transform: translateY(4px);
+	    box-shadow: 0 2px #0056b3;
+}
